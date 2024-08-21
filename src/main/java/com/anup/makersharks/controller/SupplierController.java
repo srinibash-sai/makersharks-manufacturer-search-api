@@ -21,7 +21,6 @@ public class SupplierController {
             @RequestParam String process,
             @RequestParam(defaultValue = "0") int pageNumber,
             @RequestParam(defaultValue = "10") int pageSize) {
-
         if (pageSize < 1) {
             throw new IllegalArgumentException("Page size must not be less than one.");
         }

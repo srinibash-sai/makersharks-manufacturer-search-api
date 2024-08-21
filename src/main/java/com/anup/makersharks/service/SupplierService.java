@@ -16,7 +16,7 @@ public class SupplierService {
 
     public Page<Supplier> searchSuppliers(String location, NatureOfBusiness natureOfBusiness, String process, int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return supplierRepository.findByCriteria(location, natureOfBusiness, process, pageable);
+        return supplierRepository.findByCriteria(location, natureOfBusiness.name(), process, pageable);
     }
 }
 

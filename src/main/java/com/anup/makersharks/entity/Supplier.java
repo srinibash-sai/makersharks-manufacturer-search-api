@@ -25,6 +25,5 @@ public class Supplier {
     @Column(nullable = false)
     private String location;
 
-    @Enumerated(EnumType.STRING)
-    private NatureOfBusiness natureOfBusiness;
+    private String natureOfBusiness;
 }

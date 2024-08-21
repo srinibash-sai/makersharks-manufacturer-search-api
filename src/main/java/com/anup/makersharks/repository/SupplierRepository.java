@@ -15,7 +15,7 @@ public interface SupplierRepository extends JpaRepository<Supplier, Long> {
     @Query("SELECT s FROM Supplier s JOIN ManufacturingProcess mp ON s.supplierId = mp.supplierId " +
             "WHERE s.location = :location AND s.natureOfBusiness = :natureOfBusiness AND mp.process = :process")
     Page<Supplier> findByCriteria(@Param("location") String location,
-                                  @Param("natureOfBusiness") NatureOfBusiness natureOfBusiness,
+                                  @Param("natureOfBusiness") String natureOfBusiness,
                                   @Param("process") String process,
                                   Pageable pageable);
 }
